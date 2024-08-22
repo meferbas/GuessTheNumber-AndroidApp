@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameProjectAndroid.GamePage"
+             BackgroundColor="{StaticResource White}">
+    <ScrollView>
+
+        <VerticalStackLayout
+               Spacing="15"
+               Padding="20,0"
+               VerticalOptions="Center"
+               >
+      
+
+              <Image
+              Source="dotnet_bot.png"
+              SemanticProperties.Description=""
+              HeightRequest="200"
+              HorizontalOptions="Center" />
+
+            <Label
+            x:Name="PlayerNamesLabel"
+            Text=""
+            FontSize="24"
+            FontAttributes="Bold"  
+            TextColor="Red"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Margin="0,20,0,0"/>
+
+            <Label
+            x:Name="TurnLabel"
+            Text=""
+            FontSize="18"
+            TextColor="ForestGreen"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            Margin="0,20,0,0"/>
+
+
+            <Label 
+            Text="Rakibinizin tahmin edeceği sayıyı girin"
+            FontSize="20"
+            HorizontalOptions="Center"
+            TextColor="{StaticResource Black}"
+            Margin="0,20,0,0"/>
+
+            <Entry 
+            x:Name="HiddenNumberEntry"
+            Placeholder="Gizli Sayıyı Girin"
+            IsPassword="True"
+            Keyboard="Numeric"
+            FontSize="18"
+            HorizontalOptions="Center"
+            TextColor="{StaticResource Black}"
+            WidthRequest="200" />
+
+            <Button
+            x:Name="startButton"
+            Text="Oyuna Başla"
+            FontSize="18"
+            Clicked="OnStartGameClicked"
+            HorizontalOptions="Center" />
+
+            <Label 
+            x:Name="DigitCountLabel"
+            Text=""
+            FontSize="18"
+            TextColor="Black"
+            HorizontalOptions="Center" />
+
+            <Entry 
+            x:Name="GuessEntry"
+            Placeholder="Tahmininizi yazın"
+            Keyboard="Numeric"
+            FontSize="18"
+            HorizontalOptions="Center"
+            WidthRequest="200"
+            TextColor="{StaticResource Black}"
+            IsEnabled="False" />
+
+            <Button
+            x:Name="GuessButton"
+            Text="Tahmin Et!"
+            FontSize="18"
+            TextColor="White"
+            Clicked="OnGuessButtonClicked"
+            HorizontalOptions="Center"
+            IsEnabled="False" />
+
+            <Label
+            x:Name="ResultLabel"
+            Text=""
+            FontSize="18"
+            TextColor="Black"
+            HorizontalOptions="Center" />
+
+            <Button
+            x:Name="ContinueButton"
+            Text="Bir Sonraki Tur"
+            FontSize="18"
+            TextColor="White"
+            Clicked="OnContinueButtonClicked"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
+            Margin="0,0,0,20"    
+            IsVisible="False" />
+            <!-- Başlangıçta gizli -->
+
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameProjectAndroid.MainPage"
+             BackgroundColor="{StaticResource White}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+                <Label
+                 Text="Sayı Tahmin Etme Oyunu"
+                 SemanticProperties.HeadingLevel="Level2"
+                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                 FontSize="18"
+                 HorizontalOptions="Center"
+                        TextColor="{StaticResource Black}"/>
+
+            <Entry
+                x:Name="Player1NameEntry"
+                Placeholder="Birinci Oyuncu İsmi"
+                FontSize="18"
+                HorizontalOptions="Center"
+                TextColor="{StaticResource Black}"
+                WidthRequest="200" />
+
+            <Entry
+                x:Name="Player2NameEntry"
+                Placeholder="İkinci Oyuncu İsmi"
+                FontSize="18"
+                TextColor="{StaticResource Black}"
+                HorizontalOptions="Center"
+                WidthRequest="200" />
+
+
+                <Button
+                    x:Name="CounterBtn"
+                    Text="Giriş"
+                    FontSize="18"
+                    TextColor="Black"
+                    BackgroundColor="Transparent"
+                    BorderWidth="4"
+                    CornerRadius="10"
+                    Padding="10,5"
+                    Clicked="OnStartGameClicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"/>
+           
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
