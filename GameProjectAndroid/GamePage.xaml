@@ -9,10 +9,10 @@
                Spacing="15"
                Padding="20,0"
                VerticalOptions="Center"
-               >
-      
+               HorizontalOptions="Center" >
 
-              <Image
+
+            <Image
               Source="dotnet_bot.png"
               SemanticProperties.Description=""
               HeightRequest="200"
@@ -59,8 +59,11 @@
             x:Name="startButton"
             Text="Oyuna Başla"
             FontSize="18"
+            TextColor="White"
+            BackgroundColor="DodgerBlue" 
             Clicked="OnStartGameClicked"
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            Margin="0,20,0,0" />
 
             <Label 
             x:Name="DigitCountLabel"
@@ -69,7 +72,7 @@
             TextColor="Black"
             HorizontalOptions="Center" />
 
-            <Entry 
+                <Entry 
             x:Name="GuessEntry"
             Placeholder="Tahmininizi yazın"
             Keyboard="Numeric"
@@ -79,39 +82,36 @@
             TextColor="{StaticResource Black}"
             IsEnabled="False" />
 
-            <Button
+                <Button
             x:Name="GuessButton"
             Text="Tahmin Et!"
             FontSize="18"
             TextColor="White"
+            BackgroundColor="Green" 
             Clicked="OnGuessButtonClicked"
             HorizontalOptions="Center"
+            Margin="0,20,0,0"
             IsEnabled="False" />
 
-            <Label
+                    <Label
             x:Name="ResultLabel"
             Text=""
             FontSize="18"
             TextColor="Black"
             HorizontalOptions="Center" />
 
-            <Button
+                    <!--<Button
             x:Name="ContinueButton"
             Text="Bir Sonraki Tur"
             FontSize="18"
             TextColor="White"
+            BackgroundColor="Orange" 
             Clicked="OnContinueButtonClicked"
             HorizontalOptions="Center"
             VerticalOptions="End"
-            Margin="0,0,0,20"    
-            IsVisible="False" />
-            <!-- Başlangıçta gizli -->
-
-
-
-
+            Margin="0,20,0,20"    
+            IsVisible="False" />-->
 
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
-

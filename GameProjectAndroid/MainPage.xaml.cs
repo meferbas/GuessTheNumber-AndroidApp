@@ -2,33 +2,29 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
-	public MainPage()
-	{
-		InitializeComponent();
-	}
-
-    private async void OnStartGameClicked(object sender, EventArgs e)
+    public MainPage()
     {
-        string player1Name = Player1NameEntry.Text;
-        string player2Name = Player2NameEntry.Text;
+        InitializeComponent();
+    }
 
-        if (string.IsNullOrEmpty(player1Name) || string.IsNullOrEmpty(player2Name))
+    private async void OnStartGameClicked(object sender, EventArgs e) // Oyuna başla butonuna tıklandığında çalışacak metot
+    {
+        string playerName = PlayerNameEntry.Text;
+
+        if (string.IsNullOrEmpty(playerName)) // Oyuncu ismi boş ise hata mesajı göster
         {
-            await DisplayAlert("Hata", "Lütfen her iki oyuncunun da ismini girin.", "Tamam");
+            await DisplayAlert("Hata", "Lütfen isminizi girin.", "Tamam");
             return;
         }
 
         try
         {
-            await Shell.Current.GoToAsync($"//GamePage?Player1Name={player1Name}&Player2Name={player2Name}");
+            // Oyuncu ismi parametresi ile GamePage'e git
+            await Shell.Current.GoToAsync($"//GamePage?PlayerName={playerName}");
         }
         catch (Exception ex)
         {
             await DisplayAlert("Error", ex.Message, "OK");
         }
     }
-
 }
-

@@ -25,23 +25,15 @@
                         TextColor="{StaticResource Black}"/>
 
             <Entry
-                x:Name="Player1NameEntry"
+                x:Name="PlayerNameEntry"
                 Placeholder="Birinci Oyuncu İsmi"
                 FontSize="18"
                 HorizontalOptions="Center"
                 TextColor="{StaticResource Black}"
                 WidthRequest="200" />
 
-            <Entry
-                x:Name="Player2NameEntry"
-                Placeholder="İkinci Oyuncu İsmi"
-                FontSize="18"
-                TextColor="{StaticResource Black}"
-                HorizontalOptions="Center"
-                WidthRequest="200" />
 
-
-                <Button
+            <Button
                     x:Name="CounterBtn"
                     Text="Giriş"
                     FontSize="18"
